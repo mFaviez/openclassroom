@@ -1,0 +1,275 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe,
+h1, h2, h2, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+p {
+margin-bottom: 8px;
+}
+
+* {
+box-sizing: border-box;
+}
+/* FONTS */
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("../fonts/Lato-Regular.eot");
+  src: url("../fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Lato-Regular.otf") format("opentype"), 
+    url("../fonts/Lato-Regular.svg") format("svg"),
+    url("../fonts/Lato-Regular.ttf") format("truetype"),
+    url("../fonts/Lato-Regular.woff") format("woff"), 
+    url("../fonts/Lato-Regular.woff2") format("woff2"); 
+  font-weight: normal;
+	font-style: normal;}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("../fonts/Lato-Bold.eot");
+  src: url("../fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), 
+    url("../fonts/Lato-Bold.otf") format("opentype"), 
+    url("../fonts/Lato-Bold.svg") format("svg"),
+    url("../fonts/Lato-Bold.ttf") format("truetype"),
+    url("../fonts/Lato-Bold.woff") format("woff"),
+    url("../fonts/Lato-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;}
+@font-face {
+  font-family: "Lato-BoldItalic";
+  src: url("../fonts/Lato-BoldItalic.eot"); 
+  src: url("../fonts/Lato-BoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Lato-BoldItalic.otf") format("opentype"),
+    url("../fonts/Lato-BoldItalic.svg") format("svg"),
+    url("../fonts/Lato-BoldItalic.ttf") format("truetype"),
+    url("../fonts/Lato-BoldItalic.woff") format("woff"), 
+    url("../fonts/Lato-BoldItalic.woff2") format("woff2"); 
+  font-weight: normal;
+  font-style: normal;}
+/* FIN DES FONTS */
+body, a, li {
+	font-family: "Lato-Regular", "sans-serif";
+}
+#wrapper {
+    width: 1200px;
+	margin: auto;
+	position: relative;
+}
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 20px;
+	z-index: 99;
+	display: flex;
+	justify-content: space-between;
+}
+nav ul {
+	padding: 0;
+	margin: 0;
+	margin-right: 25px;
+}
+nav ul li {
+	display: inline-block;
+	margin-left: 20px;
+}
+nav ul li a {
+	color: white;
+	font-size: .9em;
+	text-decoration: none;
+}
+#logo {
+	margin-left: 15px;
+}
+#diaporama {
+    position: relative;
+	width: 1200px;
+    height: 675px;
+    margin: auto;
+}
+#diaporama ul {
+	list-style: none;
+}
+#diaporama ul li {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#diaporama ul li img {
+    max-width: 1200px;
+	height: auto;
+}
+.next, .prev, .stop, .play {
+	position: absolute;
+	z-index: 999;
+	color: white;
+	font-size: 2.5em;
+	background-color: rgba(255,255,255,.25);
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.next, .prev {
+	top: 50%;
+	padding: 0 15px 0 15px;
+}
+.next {
+	right: 2%;
+}
+.prev {
+	left: 2%;
+}
+.stop, .play {
+	bottom: 15px;
+	width: 55px;
+	height: 55px;
+}
+.stop {
+	right: 45%;
+}
+.play {
+	left: 45%;
+}
+/* map */
+#map{ /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
+	height: 498px;
+	width: 796px;
+	border: solid 1px black;
+}
+#reserv-map {
+	margin: 40px 0 40px 0;
+	width: 100%;
+}
+#Form {
+	width: 380px;
+	margin-left: 20px;
+}
+#map, #Form {
+	display: inline-block;
+	vertical-align: top;
+}
+h1, h2 {
+	margin: 0;
+	background-color: #f3515a;
+	color: white;
+	padding: 5px 0 5px 0;
+	text-align: center;
+	font-size: 1.2em;
+}
+#infosForm, #inputsForm {
+	padding: 5px 0 5px 5px;
+	border: solid 1px #f3515a;
+}
+#infosForm div {
+	margin: 8px 0 8px 0;
+}
+#inputsForm {
+	line-height: 1.8;
+}
+input {
+	border: none;
+	border-bottom: solid 1px black;
+	margin-left: 10px;
+}
+#inputName {
+	width: 72%;
+}
+#inputFirstName {
+	width: 66%;
+}
+/* canvas */
+#canvas-sign {
+    border: solid 1px black;
+    background-color: white;
+    height: 150px;
+    width: 97%;
+}
+#erase, #submit { 
+	font-family: "Lato-Bold";
+	border: solid 1px #f3515a;
+	cursor: pointer;
+	width: 71px;
+	display: inline-block;
+	vertical-align: top;
+}
+#erase {
+	color: #f3515a;
+	background-color: white;
+	text-align: center;
+	font-size: .88em;
+}
+#erase:hover {
+	color: white;
+	background-color: #d11414;
+	border: solid 1px #d11414;	
+}
+#submit {
+	color: white;
+	background-color: #f3515a;
+	padding: 4px 8px 4px 8px;
+}
+#submit:hover {
+	border: solid 1px #199e4e;
+	background-color: #199e4e;
+}
+.container p {
+	text-align: center;
+	font-size: 1.2em;
+	font-family: "Lato-Bold";
+	width: 100%;
+	padding: 15px 5px;
+	color: #427fc4;;
+	line-height: 1.2;
+}
+/* Footer */
+footer {
+	font-family: "Lato-Regular";
+    background-color: #403d3e;
+	color: white;
+	margin-bottom: 20px;
+	padding: 8px 0 8px 0;
+	text-align: center;
+	font-size: .8em;
+}
+
+
